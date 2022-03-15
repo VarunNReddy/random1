@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+body{
+    background-color: #19363f;
+    align-content: center;
+    display: flex;
+}
+#h3{
+    background-color: lightblue;
+    width: 100px;
+}
+.output{
+    background-color: blue;
+    padding: 10px;
+    outline: cadetblue;
+}
+.a{
+    background-color: darkblue;
+    padding: 5px;
+    outline: cadetblue;
+}
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+    </style>
+</head>
+<body>
+    <div id="h3">
+        <h3>Calculator</h3>
+    </div>
+
+
+<button class="randomizeradd" onclick="outputrandomadd()">Random number generator(add)</button>
+<h4 id="random-entryadd" style="color: green;"></h4>
+<p id="add1" style="color: red;"></p>
+<p id="add2" style="color: red;"></p>
+<p id="add3" style="color: red;"></p>
+<p id="add4" style="color: red;"></p>
+<p id="add5" style="color: red;"></p>
+<p id="add6" style="color: red;"></p>
+
+<button class="randomizermul" onclick="outputrandommul()">Random number generator(mul)</button>
+<h4 id="random-entrymul" style="color: green;"></h4>
+<p id="mul1" style="color: red;"></p>
+<p id="mul2" style="color: red;"></p>
+<button class="randomizersub" onclick="outputrandomsub()">Random number generator(sub)</button>
+<h4 id="random-entrysub" style="color: green;"></h4>
+<p id="sub1" style="color: red;"></p>
+<p id="sub2" style="color: red;"></p>
+    <script>
+        
+function outputrandomadd() {
+    var random = Math.floor(Math.random() * 100);
+    document.getElementById("add1").innerHTML = random
+    var random2 = Math.floor(Math.random() * 100);
+    document.getElementById("add2").innerHTML = "+" + random2
+    var random3 = Math.floor(Math.random() * 100);
+    document.getElementById("add3").innerHTML = "+" +random3
+    var random4 = Math.floor(Math.random() * 100);
+    document.getElementById("add4").innerHTML = "+" + random4
+    var random5 = Math.floor(Math.random() * 100);
+    document.getElementById("add5").innerHTML = "+" + random5
+    var random6 = Math.floor(Math.random() * 100);
+    document.getElementById("add6").innerHTML = "+" + random6
+    document.getElementById("random-entryadd").innerHTML = random + random2 + random3 + random4 + random5 + random6
+}
+function outputrandomsub() {
+    var random = Math.floor(Math.random() * 100);
+    document.getElementById("sub1").innerHTML = random
+    var random2 = Math.floor(Math.random() * 10);
+    document.getElementById("sub2").innerHTML = "-" + random2
+    document.getElementById("random-entrysub").innerHTML = random - random2
+}
+function outputrandommul() {
+    var random = Math.floor(Math.random() * 10);
+    document.getElementById("mul1").innerHTML = random;
+    var random2 = Math.floor(Math.random() * 100);
+    document.getElementById("mul2").innerHTML = "*" + random2;
+    document.getElementById("random-entrymul").innerHTML = random * random2;
+
+}
+    </script>
+</body>
+</html>
